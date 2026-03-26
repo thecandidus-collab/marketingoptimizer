@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Marketing Mix Optimizer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body style="font-family: Arial; background:#f5f7fa; padding:30px;">
+
+<h1 style="text-align:center;">📊 Marketing Mix Optimizer</h1>
+
+<div style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+
+<h2>💰 Recommended Budget Allocation (₹50L)</h2>
+
+<ul>
+  <li>Email: ₹11,22,870</li>
+  <li>SMS: ₹7,42,060</li>
+  <li>Affiliate: ₹6,69,131</li>
+  <li>Organic Social: ₹5,03,620</li>
+  <li>Influencer: ₹4,62,602</li>
+  <li>Google Search: ₹4,49,993</li>
+  <li>Instagram Reels: ₹4,05,904</li>
+  <li>YouTube: ₹2,76,549</li>
+  <li>Meta Ads: ₹2,08,192</li>
+  <li>Google Display: ₹1,59,079</li>
+</ul>
+
+</div>
+
+<br>
+
+<div style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+
+<h2>📊 ROAS Comparison</h2>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+<br>
+
+<div style="background:white; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+
+<h2>📈 Key Insights</h2>
+
+<ul>
+  <li>Email and SMS show highest ROAS → underutilized opportunity</li>
+  <li>Affiliate & Organic Social deliver strong returns</li>
+  <li>Meta Ads & Google Display show poor efficiency</li>
+  <li>Some channels show diminishing returns at high spend</li>
+  <li>Reallocation improves ROI significantly</li>
+</ul>
+
+</div>
+
+<script>
+const ctx = document.getElementById('chart');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["Email","SMS","Affiliate","Organic","Influencer","Search","Reels","YouTube","Meta","Display"],
+    datasets: [{
+      label: 'ROAS',
+      data: [7.88,5.21,4.70,3.53,3.25,3.16,2.85,1.94,1.46,1.11]
+    }]
+  }
+});
+</script>
+
+</body>
+</html>
